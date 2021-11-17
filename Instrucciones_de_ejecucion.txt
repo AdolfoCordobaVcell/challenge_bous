@@ -1,0 +1,34 @@
+-----------------------------------------
+notas:
+El script funciona correctamente pero el objeto JSON que se imprime es demasiado grande y no se visualiza en el navegador
+asique solo se muestra por consola.
+El usuario que se usa para la ejecución del script en la base de datos es "postgres" con la contraseña "password" de
+tener otra contraseña colocada para el usuario, debera de cambiar el archivo "servicio.py" la configuración a la
+conexión a la base de datos, la variable "DB_PASS".
+------------------------------------------
+
+
+Para ejecutar todo el script es necesario instalar las librerias necesarias y seguir los pasos siguientes.
+
+Paso 1: Importar la BD en una base de datos llamada "challenge_bous" (yo utilize pgAdmin4 para exportarla con el rolname de postgres).
+
+Paso 2: Darle permiso de ejecución al archivo.
+chmod -X challenge.sh
+
+Paso 3: Ejecutar el script enviandole el archivo excel, (en este caso el archivo excel viene en el repositorio, debe de estar en
+la misma carpeta para que el script lo encuentre correctamente)
+./challenge.sh excel_ejemplo_desarrolador_backend.xlsx
+
+---------------------------------------
+notas:
+En este punto la consola le pedira 2 veces la contraseña para el usuario "postgres" ya que la requiere para, copiar el archivo .csv
+el la tabla "tabla_de_trabajo" y para ejecutar el contenido del script "carga_y_calculos.sql".
+---------------------------------------
+
+Paso 4: Abrir una ventana del navegador en la dirección
+localhost:3000
+se habra generado un folio para este momento que se visualiza en la terminal, colocar el folio en el input y dar click en el botón
+el objeto JSON no se puede visualizar en el HTML porque tuve un problema con las cookies entonces se imprime en la terminal, 
+visualizarlo ahi.
+
+Ejecutar nuevamente el script creara el siguiente folio y lo podra visualizar.
